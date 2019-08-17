@@ -46,6 +46,12 @@ cp ~/.zshrc ~
 cp ~/.tmux.conf ~
 cp ~/tmux-split ~/bin/tmux-split
 
+# Install vim solarized colors
+git clone https://github.com/altercation/vim-colors-solarized
+mkdir -p ~/.vim/colors/
+mv vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
+rm -rf vim-colors-solarized
+ 
 # Install zsh
 brew install zsh
 
