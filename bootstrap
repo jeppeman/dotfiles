@@ -5,17 +5,14 @@ set -e
 # Install brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Install zsh
-brew install zsh
-
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 # Install wget
 brew install wget
 
 # Install iTerm2
 brew cask install iterm2
+
+# Install tmux
+brew install tmux
 
 # Install coreutils
 brew install coreutils
@@ -43,3 +40,14 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # Install emoji cli 
 brew install jq fzf peco && git clone https://github.com/b4b4r07/emoji-cli ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/emoji-cli
+
+# Move dotfiles
+cp ~/.zshrc ~
+cp ~/.tmux.conf ~
+cp ~/tmux-split ~/bin/tmux-split
+
+# Install zsh
+brew install zsh
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

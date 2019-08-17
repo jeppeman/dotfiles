@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+tmux new-session \; split-window -h \; split-window -v \; select-pane -L \; split-window -v \; attach
