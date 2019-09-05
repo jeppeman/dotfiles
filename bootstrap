@@ -41,10 +41,21 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # Install emoji cli 
 brew install jq fzf peco && git clone https://github.com/b4b4r07/emoji-cli ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/emoji-cli
 
-# Move dotfiles
-cp ~/.zshrc ~
-cp ~/.tmux.conf ~
-cp ~/tmux-split ~/bin/tmux-split
+# Install macvim
+brew install cmake macvim
+
+# Install Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# Install vim plugins
+vim +PluginInstall +qall
+
+# Install YouCompleteMe
+current_dir=$(pwd)
+cd ~/.vim/bundle/YouCompleteMe && python install.py && cd ${current_dir}
+
+# Move files
+mv ~/tmux-split ~/bin/tmux-split
 
 # Install vim solarized colors
 git clone https://github.com/altercation/vim-colors-solarized
