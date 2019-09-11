@@ -21,6 +21,4 @@ augroup ProjectDrawer
   autocmd VimEnter * :Vexplore
 augroup END
 
-set mouse=a
-
 nnoremap <ESC> i
