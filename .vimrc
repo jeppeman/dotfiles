@@ -10,6 +10,7 @@ call vundle#end()            " required
 syntax enable
 set background=dark
 colorscheme solarized
+set number
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
