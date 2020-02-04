@@ -11,7 +11,10 @@ syntax enable
 set background=dark
 colorscheme solarized
 set number
-
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set autoindent
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
