@@ -23,6 +23,18 @@ brew install cowsay
 # Install fortune
 brew install fortune
 
+# Create backup of .zshrc
+cp .zshrc .zshrctmp
+
+# Install zsh
+brew install zsh
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Restore zshrc
+rm .zshrc && mv .zshrctmp .zshrc
+
 # Install dircolors
 git clone https://github.com/seebi/dircolors-solarized ~/.dircolors
 
@@ -54,17 +66,11 @@ vim +PluginInstall +qall
 current_dir=$(pwd)
 cd ~/.vim/bundle/YouCompleteMe && python install.py && cd ${current_dir}
 
-# Move files
-mv ~/tmux-split ~/bin/tmux-split
-
 # Install vim solarized colors
 git clone https://github.com/altercation/vim-colors-solarized
 mkdir -p ~/.vim/colors/
 mv vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 rm -rf vim-colors-solarized
- 
-# Install zsh
-brew install zsh
 
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# Move files
+mv ~/tmux-split ~/bin/tmux-split
