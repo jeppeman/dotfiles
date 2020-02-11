@@ -65,7 +65,7 @@ vim +PluginInstall +qall
 
 # Install YouCompleteMe
 current_dir=$(pwd)
-cd ~/.vim/bundle/YouCompleteMe && python install.py && cd ${current_dir}
+cd ~/.vim/bundle/YouCompleteMe && python3 install.py && cd ${current_dir}
 
 # Install vim solarized colors
 git clone https://github.com/altercation/vim-colors-solarized
