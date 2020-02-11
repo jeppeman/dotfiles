@@ -43,7 +43,7 @@ rm ~/.zshrc && mv ~/.zshrctmp ~/.zshrc
 wget --no-check-certificate -O ~/.dircolors/solarized-iterm https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Solarized%20Dark%20-%20Patched.itermcolors
 
 # Download powerline font
-wget --no-check-certificate -O ~/Downloads/source_code_for_powerline.otf https://github.com/powerline/fonts/raw/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf
+wget --no-check-certificate -O ~/Library/Fonts/source_code_for_powerline.otf https://github.com/powerline/fonts/raw/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf
 
 # Install syntax highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
