@@ -26,6 +26,34 @@ brew install fortune
 # Install dircolors
 git clone https://github.com/seebi/dircolors-solarized ~/.dircolors
 
+# Create backup of .zshrc
+cp ~/.zshrc ~/.zshrctmp
+
+# Install zsh
+brew install zsh
+
+# Install oh-my-zsh
+wget --no-check-certificate -O https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+RUNZSH=no
+sh install.sh
+
+rm ~/.zshrc && mv ~/.zshrctmp ~/.zshrc
+
+# Install solarized theme
+wget --no-check-certificate -O ~/.dircolors/solarized-iterm https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Solarized%20Dark%20-%20Patched.itermcolors
+
+# Download powerline font
+wget --no-check-certificate -O ~/Downloads/source_code_for_powerline.otf https://github.com/powerline/fonts/raw/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf
+
+# Install syntax highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Install auto suggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# Install emoji cli
+brew install jq fzf peco && git clone https://github.com/b4b4r07/emoji-cli ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/emoji-cli
+
 # Install macvim
 brew install cmake macvim
 
@@ -47,23 +75,3 @@ rm -rf vim-colors-solarized
 
 # Move files
 sudo mv ~/tmux-split /usr/local/bin/tmux-split
-
-# Install zsh
-
-# Create backup of .zshrc
-cp ~/.zshrc ~/.zshrctmp
-
-# Install zsh and oh-my-zsh
-sh -c "$(brew install zsh \
-  && curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh \
-  && rm ~/.zshrc && mv ~/.zshrctmp ~/.zshrc \
-  # Install solarized theme
-  && wget --no-check-certificate -O ~/.dircolors/solarized-iterm https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Solarized%20Dark%20-%20Patched.itermcolors \
-  # Download powerline font
-  && wget --no-check-certificate -O ~/Downloads/source_code_for_powerline.otf https://github.com/powerline/fonts/raw/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf \
-  # Install syntax highlighting
-  && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting \
-  # Install auto suggestions
-  && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions \# Install emoji cli
-  && brew install jq fzf peco && git clone https://github.com/b4b4r07/emoji-cli ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/emoji-cli
-)"
