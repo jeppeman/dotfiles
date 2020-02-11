@@ -26,6 +26,9 @@ brew install fortune
 # Install dircolors
 git clone https://github.com/seebi/dircolors-solarized ~/.dircolors
 
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh && rm ~/.zshrc && mv ~/.zshrctmp ~/.zshrc)"
+
 # Install solarized theme
 wget --no-check-certificate -O ~/.dircolors/solarized-iterm https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Solarized%20Dark%20-%20Patched.itermcolors
 
@@ -65,9 +68,6 @@ sudo mv ~/tmux-split /usr/local/bin/tmux-split
 
 # Create backup of .zshrc
 cp ~/.zshrc ~/.zshrctmp
-
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh && rm ~/.zshrc && mv ~/.zshrctmp ~/.zshrc)"
 
 # Install zsh
 brew install zsh
