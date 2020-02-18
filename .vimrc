@@ -5,12 +5,11 @@ filetype plugin indent on     " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'tpope/vim-sensible'
-Plugin 'crusoexia/vim-javascript'
 Plugin 'crusoexia/vim-javascript-lib'
 Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'HerringtonDarkholme/yats.vim'
 call vundle#end()            " required
 syntax on 
 set termguicolors
