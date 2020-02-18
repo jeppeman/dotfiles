@@ -4,13 +4,11 @@ DEFAULT_USER=$(whoami)
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export DRACULA_THEME="${HOME}/.dracula"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="dracula"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -101,12 +99,19 @@ eval `gdircolors ~/.dircolors/dircolors.ansi-dark` >> ~/.zshrc
 alias ls='gls --color=auto' >> ~/.zshrc
 fortune | cowsay -n
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home
 export M2_HOME=$HOME/Library/apache-maven-3.6.0/
 export GLASSFISH_HOME=/usr/local/opt/glassfish/libexec
+export TERM=xterm-256color
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export EMOJI_CLI_USE_EMOJI=true
+export GOOGLE_APPLICATION_CREDENTIALS=${HOME}/secrets/gcloud.json
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jesperaman/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jesperaman/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jesperaman/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jesperaman/google-cloud-sdk/completion.zsh.inc'; fi
