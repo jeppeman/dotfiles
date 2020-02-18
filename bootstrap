@@ -14,6 +14,9 @@ brew cask install iterm2
 # Install tmux
 brew install tmux
 
+# Install node
+brew install node
+
 # Install tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -63,15 +66,22 @@ brew install jq fzf peco && git clone https://github.com/b4b4r07/emoji-cli ${ZSH
 # Install macvim
 brew install cmake macvim
 
+# Install coc.nvim
+mkdir -p ~/.vim/pack/coc/start
+cd ~/.vim/pack/coc/start
+curl --fail -L https://github.com/neoclide/coc.nvim/archive/release.tar.gz|tar xzfv -
+cd ~
+
+# Install vim-javascript
+git clone https://github.com/pangloss/vim-javascript.git ~/.vim/pack/vim-javascript/start/vim-javascript
+
 # Install Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Install vim plugins
 vim +PluginInstall +qall
 
-# Install YouCompleteMe
-current_dir=$(pwd)
-cd ~/.vim/bundle/YouCompleteMe && python3 install.py && cd ${current_dir}
+# Install vim-
 
 # Install vim solarized colors
 git clone https://github.com/altercation/vim-colors-solarized
@@ -81,4 +91,3 @@ rm -rf vim-colors-solarized
 
 # Move files
 sudo mv ~/tmux-split /usr/local/bin/tmux-split
-
