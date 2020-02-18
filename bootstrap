@@ -14,6 +14,9 @@ brew cask install iterm2
 # Install tmux
 brew install tmux
 
+# Install tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Install coreutils
 brew install coreutils
 
@@ -75,3 +78,4 @@ rm -rf vim-colors-solarized
 
 # Move files
 sudo mv ~/tmux-split /usr/local/bin/tmux-split
+
