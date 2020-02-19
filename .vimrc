@@ -25,6 +25,11 @@ set autoindent
 let mapleader=','
 autocmd BufRead,BufNewFile   *.yml set tabstop=2|set shiftwidth=2 
 
+set cursorline
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=#303000 ctermbg=234
 " highlight CursorLineNr cterm=NONE ctermbg=15 ctermfg=8 gui=NONE guibg=#ffffff guifg=#d70000
 
 let g:netrw_banner = 0
