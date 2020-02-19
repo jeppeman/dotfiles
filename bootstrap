@@ -69,7 +69,7 @@ brew install cmake macvim
 # Install coc.nvim
 mkdir -p ~/.vim/pack/coc/start
 cd ~/.vim/pack/coc/start
-curl --fail -L https://github.com/neoclide/coc.nvim/archive/release.tar.gz|tar xzfv -
+curl --fail -L https://github.com/neoclide/coc.nvim/archive/release.tar.gz | tar xzfv -
 cd ~
 
 # Install vim-javascript
