@@ -47,6 +47,7 @@ rm ~/.zshrc && mv ~/.zshrctmp ~/.zshrc
 # Install dracula for zsh
 git clone https://github.com/dracula/zsh.git ~/.dracula_zsh
 mv .dracula_zsh/* ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes
+rf -rf .dracula_zsh
 
 # Install solarized theme
 wget --no-check-certificate -O ~/.dircolors/solarized-iterm https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Solarized%20Dark%20-%20Patched.itermcolors
