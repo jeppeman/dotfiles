@@ -10,6 +10,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'crusoexia/vim-javascript-lib'
 Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'HerringtonDarkholme/yats.vim'
+Plugin 'preservim/nerdtree'
 call vundle#end()            " required
 syntax on 
 set termguicolors
@@ -32,14 +33,6 @@ autocmd WinLeave * setlocal nocursorline
 highlight CursorLine guibg=#303000 ctermbg=234
 " highlight CursorLineNr cterm=NONE ctermbg=15 ctermfg=8 gui=NONE guibg=#ffffff guifg=#d70000
 
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-augroup ProjectDrawer
-    autocmd!
-    autocmd VimEnter * :Vexplore
-augroup END
+autocmd vimenter * NERDTree
 
 nnoremap <ESC> i
