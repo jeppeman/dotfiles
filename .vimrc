@@ -11,6 +11,9 @@ Plugin 'crusoexia/vim-javascript-lib'
 Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'preservim/nerdtree'
+Plugin 'Repeat.vim'
+Plugin 'surround.vim'
+Plugin 'commentary.vim'
 call vundle#end()            " required
 syntax on 
 set termguicolors
