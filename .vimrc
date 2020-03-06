@@ -26,6 +26,7 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 set autoindent
+set rnu
 let mapleader=','
 autocmd BufRead,BufNewFile   *.yml set tabstop=2|set shiftwidth=2 
 
