@@ -39,4 +39,7 @@ highlight CursorLine guibg=#303000 ctermbg=234
 
 autocmd vimenter * NERDTree
 
+let &t_SI = "\e[5 q"
+let &t_EI = "\e[2 q"
+
 nnoremap <ESC> i
