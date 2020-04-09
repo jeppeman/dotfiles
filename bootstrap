@@ -17,6 +17,9 @@ brew install tmux
 # Install node
 brew install node
 
+# Install htop
+brew install htop
+
 # Install tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
