@@ -99,9 +99,6 @@ eval `gdircolors ~/.dircolors/dircolors.ansi-dark` >> ~/.zshrc
 alias ls='gls --color=auto' >> ~/.zshrc
 fortune | cowsay -n
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home
-export M2_HOME=$HOME/Library/apache-maven-3.6.0/
-export GLASSFISH_HOME=/usr/local/opt/glassfish/libexec
 export TERM=xterm-256color
 
 export NVM_DIR="$HOME/.nvm"
@@ -110,8 +107,3 @@ export NVM_DIR="$HOME/.nvm"
 
 export EMOJI_CLI_USE_EMOJI=true
 export GOOGLE_APPLICATION_CREDENTIALS=${HOME}/secrets/gcloud.json
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jesperaman/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jesperaman/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/jesperaman/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jesperaman/google-cloud-sdk/completion.zsh.inc'; fi

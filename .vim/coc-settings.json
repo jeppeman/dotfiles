@@ -1,0 +1,10 @@
+{
+  "languageserver": {
+    "haskell": {
+      "command": "~/.cabal/bin/haskell-language-server-8.10.4",
+      "args": ["--lsp"],
+      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
+      "filetypes": ["haskell", "lhaskell"]
+    }
+  }
+}

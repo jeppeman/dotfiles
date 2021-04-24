@@ -80,6 +80,9 @@ cd ~
 # Install vim-javascript
 git clone https://github.com/pangloss/vim-javascript.git ~/.vim/pack/vim-javascript/start/vim-javascript
 
+# Install haskell-vim
+git clone https://github.com/neovimhaskell/haskell-vim.git ~/.vim/bundle/haskell-vim
+
 # Install Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
