@@ -62,7 +62,7 @@ ZSH_THEME="agnoster_vi"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions emoji-cli)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions emoji-cli history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,3 +107,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export EMOJI_CLI_USE_EMOJI=true
 export GOOGLE_APPLICATION_CREDENTIALS=${HOME}/secrets/gcloud.json
+
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
