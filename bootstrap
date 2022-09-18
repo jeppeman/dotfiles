@@ -9,7 +9,7 @@ set -e
 brew install wget
 
 # Install iTerm2
-brew cask install iterm2
+brew install iterm2
 
 # Install tmux
 brew install tmux
@@ -21,7 +21,7 @@ brew install node
 brew install htop
 
 # Install tpm
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+rm -rf ~/.tmux/plugins/tpm && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Install coreutils
 brew install coreutils
@@ -50,8 +50,8 @@ mv agnoster_vi.zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes
 
 # Install dracula for zsh
 git clone https://github.com/dracula/zsh.git ~/.dracula_zsh
-mv .dracula_zsh/* ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes
-rf -rf .dracula_zsh
+mv ~/.dracula_zsh/* ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes
+rf -rf ~/.dracula_zsh
 
 # Install solarized theme
 wget --no-check-certificate -O ~/.dircolors/solarized-iterm https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Solarized%20Dark%20-%20Patched.itermcolors
@@ -89,13 +89,5 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # Install vim plugins
 vim +PluginInstall +qall
 
-# Install vim-
-
-# Install vim solarized colors
-git clone https://github.com/altercation/vim-colors-solarized
-mkdir -p ~/.vim/colors/
-mv vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
-rm -rf vim-colors-solarized
-
 # Move files
-sudo mv ~/tmux-split /usr/local/bin/tmux-split
+sudo mkdir -p /usr/local/bin && sudo mv tmux-split /usr/local/bin/tmux-split
